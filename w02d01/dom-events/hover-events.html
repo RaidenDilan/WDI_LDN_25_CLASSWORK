@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mouse Events</title>
+    <style>
+      #mouseHover{width: 500px;height:500px;background-color: red}
+    </style>
+  </head>
+  <body>
+    <img src="http://fillmurray.com/200/301" width="200" />
+    <div id="mouseHover"></div>
+
+    <script>
+
+      const img = document.querySelector('img');
+
+      img.addEventListener('mouseover', (e) => {
+        e.target.src = 'http://fillmurray.com/200/300';
+      });
+
+      img.addEventListener('mouseout', (e) => {
+        e.target.src = 'http://fillmurray.com/200/301';
+      });
+
+      const mouseHover = document.getElementById('mouseHover');
+
+      mouseHover.addEventListener('mouseenter', (e) => {
+        console.log('You\'ve entered the element');
+      });
+
+      mouseHover.addEventListener('mousemove', (e) => {
+        e.target.style.opacity = (e.pageY/1000);
+        e.target.style.filter = `alpha(opacity=${(e.pageY/1000)})`;
+      });
+
+      mouseHover.addEventListener('mouseout', (e) => {
+        console.log('You\'ve left the element');
+      });
+
+    </script>
+  </body>
+</html>

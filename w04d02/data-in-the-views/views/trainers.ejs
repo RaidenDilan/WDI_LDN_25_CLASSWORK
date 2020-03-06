@@ -1,0 +1,18 @@
+<div class="row">
+  <% records.forEach((record) => { %>
+    <div class="col-md-6">
+      <img class="img-fluid" src="<%= record.image %>" alt="<%= record.model %>">
+      <h4><%= record.model %></h4>
+      <h6><%= record.brand %></h6>
+      <p>
+        Available In:
+        <ul class="list-group">
+          <% record.colors.forEach((color) => { %>
+            <li class="list-group-item"><%= color %></li>
+          <% }) %>
+        </ul>
+      </p>
+      <p>&pound;<%= record.rrp %></p>
+    </div>
+  <% }) %>
+</div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click Events</title>
+  </head>
+  <body>
+    <button id="click">click</button>
+    <button id="dblclick">dblclick</button>
+    <button id="mousedown_mouseup">Mousedown Mouseup</button>
+
+    <script>
+
+      const clickBtn = document.getElementById('click');
+
+      clickBtn.addEventListener('click', (e) => {
+        console.log('I\'ve been clicked!');
+        console.log(e.target);
+      });
+
+      const dblClickBtn = document.getElementById('dblclick');
+
+      dblClickBtn.addEventListener('dblclick', (e) => {
+        console.log('I\'ve been dblclicked !');
+        console.log(e.target);
+      });
+
+      const mouseDownMouseUpBtn = document.getElementById('mousedown_mouseup');
+
+      mouseDownMouseUpBtn.addEventListener('mousedown', (e) => {
+        console.log('mousedown on button');
+        console.log(e.target);
+      });
+
+      mouseDownMouseUpBtn.addEventListener('mouseup', (e) => {
+        console.log('mouseup on button');
+        console.log(e.target);
+      });
+    </script>
+  </body>
+</html>

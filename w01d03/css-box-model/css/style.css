@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.box {
+  background-color: dodgerBlue;
+  font-size: 20px;
+  font-weight: bold;
+  /*margin: 20px 40px 20px 40px;*/
+  /*margin: 20px 40px:*/
+  /*margin: 20px 40px 30px;*/
+  margin: 40px;
+  border: 5px solid navy;
+  padding: 20px;
+  width: 250px;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+main {
+  width: 800px;
+  /*margin: 0 auto;*/
+  margin: 50px auto;
+  border: 2px solid #333;
+  padding: 10px;
+  /*position: relative;*/
+  /*overflow: auto;*/
+}
+
+c{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  /*position: relative;
+  top: 100px;*/
+  float: left;
+  margin-right: 20px;
+
+}
+
+footer {
+  clear: both;
+  padding-top: 10px;
+}

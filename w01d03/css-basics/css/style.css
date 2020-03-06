@@ -1,0 +1,95 @@
+body {
+  font-family: sans-serif;
+}
+
+h1, h2 {
+  color: blue;
+  font-size: 30px;
+}
+
+p {
+  color: green;
+}
+
+div {
+  /*border-width: 1px;
+  border-style: solid;
+  border-color: black;*/
+  border: 1px solid black;
+}
+
+.comment {
+  font-weight: bold;
+  color: orchid;
+}
+
+#message {
+  font-style: italic;
+  color: purple;
+}
+
+.mammals {
+  text-decoration: underline;
+}
+
+.birds {
+  font-style: italic;
+}
+
+.fish {
+  font-weight: bold;
+}
+
+#mouse {
+  color: grey;
+}
+
+#goldfish {
+  color: gold;
+}
+
+#sheep {
+  color: steelBlue;
+}
+
+.first {
+  color: red;
+}samecond {
+  font-size: 30px;
+}
+
+.first.second {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  text-align: center;
+}
+
+li.same {
+  font-size: 20px;
+}
+
+li#different {
+  font-weight: bold;
+}
+
+div p {
+  color: tomato;
+}
+
+#pilot {
+  color: blue;
+}
+
+.character {
+  color: purple;
+}
+
+.female {
+  color: red;
+}

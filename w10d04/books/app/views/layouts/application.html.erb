@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Bookshop</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <ul>
+          <li><h1><%= link_to 'The Bookshop', root_path %></h1></li>
+          <li><%= link_to 'New Genre', new_genre_path %></li>
+          <li><%= link_to 'Genres', genres_path %></li>
+          <li><%= link_to 'New Author', new_author_path %></li>
+          <li><%= link_to 'Authors', authors_path %></li>
+          <li><%= link_to 'New Book', new_book_path %></li>
+          <li><%= link_to 'Books', books_path %></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <%= yield %>
+    </main>
+  </body>
+</html>

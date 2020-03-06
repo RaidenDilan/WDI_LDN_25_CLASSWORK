@@ -1,0 +1,16 @@
+<form ng-submit="postsNew.submit()">
+  <div>
+    <label>Body</label><br>
+    <textarea ng-model="postsNew.post.body"></textarea>
+  </div>
+  <div>
+    <label>User</label><br>
+    <!-- {{ postsNew.post }} -->
+    <select ng-model="postsNew.post.user_id">
+      <option disabled selected value="">Please select</option>
+      <option ng-repeat="user in postsNew.users" ng-value="{{ user.id }}">{{ user.fullname}}</option>
+    </select>
+  </div>
+  <hr>
+  <button>Submit</button>
+</form>

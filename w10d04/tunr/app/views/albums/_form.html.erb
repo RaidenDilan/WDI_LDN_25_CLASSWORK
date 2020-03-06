@@ -1,0 +1,47 @@
+<%= form_for(album) do |f| %>
+  <% if album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+      <% album.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo %>
+    <%= f.text_field :photo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :release_date %>
+    <%= f.date_select :release_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :artists_id %>
+    <%= f.collection_select :artist_id, Artist.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :genres %>
+    <%= f.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

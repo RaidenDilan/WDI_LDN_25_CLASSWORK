@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="twitter">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Stack Setup</title>
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+    <body ng-controller="LoginCtrl as login">
+
+      <h1 style="text-align: center;">REGISTER</h1>
+
+      <hr>
+
+      <form ng-submit="login.register()" style="text-align: center;">
+        <div>
+          <label>Username</label><br>
+          <input type="text" ng-model="login.user.username" style="margin-top: 10px; text-align: center;
+text-align: center;">
+        </div>
+        <div>
+          <label>Email</label><br>
+          <input type="text" ng-model="login.user.email" style="margin-top: 10px; text-align: center;
+text-align: center;">
+        </div>
+        <div>
+          <label>Password</label><br>
+          <input type="password" ng-model="login.user.password" style="margin-top: 10px; text-align: center;
+text-align: center;">
+        </div>
+        <div>
+          <label>Password Confirmation</label><br>
+          <input type="password" ng-model="login.user.password_confirmation" style="margin-top: 10px; text-align: center;
+text-align: center;">
+        </div>
+        <hr>
+        <button style="padding: 2px 35px; font-size: 15px; color: lightgreen; background-color: black; outline: none;">Register</button>
+      </form>
+
+      <hr>
+
+      <h1 style="text-align: center;">LOGIN</h1>
+
+      <form ng-submit="login.login()" style="text-align: center;">
+        <div>
+          <label>Email</label><br>
+          <input type="text" ng-model="login.credentials.email" style="margin-top: 10px; text-align: center;">
+        </div>
+        <div>
+          <label>Password</label><br>
+          <input type="text" ng-model="login.credentials.password" style="margin-top: 10px; text-align: center;">
+        </div>
+        <hr>
+        <button style="padding: 2px 8px; font-size: 15px; color: lightgreen; background-color: black; outline: none;">Login</button>
+      </form>
+      <hr>
+      <div style="text-align: center;">
+        <button ng-click="login.authenticate('github')" style="padding: 2px 8px; font-size: 15px; color: red; background-color: black; outline: none;">GitHub</button>
+      </div>
+      <hr>
+
+  </body>
+</html>

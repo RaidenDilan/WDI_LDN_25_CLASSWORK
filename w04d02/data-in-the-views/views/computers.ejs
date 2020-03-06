@@ -1,0 +1,14 @@
+<div class="row">
+  <% records.forEach((record) => { %>
+    <div class="col-md-6">
+      <img class="img-fluid" src="<%= record.image %>" alt="<%= record.model %>">
+      <h4><%= record.model %></h4>
+      <h6><%= record.brand %></h6>
+      <h6><%= record.brand %></h6>
+      <h6><%= record.ram %></h6>
+      <h6><%= record.processor %></h6>
+      <h6><%= record.capacity %></h6>
+      <p>&pound;<%= record.rrp %></p>
+    </div>
+  <% }) %>
+</div>

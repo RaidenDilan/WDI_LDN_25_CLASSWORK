@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-12">
+    <p id="notice"><%= notice %></p>
+    <h1>The Books</h1>
+  </div>
+  <% @books.each do |book| %>
+    <div class="col-md-6">
+      <div class="book">
+        <%= image_tag(book.image) %>
+        <h2><%= book.title %></h2>
+        <h3><%= book.author.try(:first_name) %> <%= book.author.try(:last_name) %></h3>
+        <h4>£<%= book.price %></h4>
+        <%= link_to 'Show', book, class: "button" %>
+        <%= link_to 'Edit', edit_book_path(book), class: "button" %>
+        <%= link_to 'Destroy', book, method: :delete, class: "button", data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+  <% end %>
+</div>

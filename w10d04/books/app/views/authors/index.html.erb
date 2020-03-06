@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-sm-12">
+    <p id="notice"><%= notice %></p>
+    <h1>The Authors</h1>
+  </div>
+  <% @authors.each do |author| %>
+    <div class="col-md-6">
+      <div class="book">
+        <h2><%= author.first_name %> <%= author.last_name %></h2>
+        <%= link_to 'Show', author, class: "button" %>
+        <%= link_to 'Edit', edit_author_path(author), class: "button" %>
+        <%= link_to 'Destroy', author, method: :delete, class: "button", data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+<div class="row">
+  <div ng-repeat="bird in birdsIndex.all" class="col-md-6">
+    <img ng-src="{{ bird.image_src }}">
+
+    <a ui-sref="birdsShow({ id: bird.id })"><h2>{{ bird.name }}</h2></a>
+    <p><strong>{{ bird.latin_name }}</strong> <em>{{ bird.family }}</em></p>
+  </div>
+</div>

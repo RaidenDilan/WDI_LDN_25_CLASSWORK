@@ -1,0 +1,7 @@
+<ul>
+  <li ng-repeat="post in postsIndex.all">
+    <a ui-sref="postsShow({ id: post.id })"><h3>{{ post }}</h3></a>
+    <!-- <p>{{ post.user.username }}</p> -->
+    <p>{{ post.user.fullname }}</p>
+  </li>
+</ul>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="donutApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular ngClass with Forms</title>
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body>
+
+    <main ng-controller="MainCtrl as main">
+      <h1> Angular Donuts</h1>
+      <form name="main.donutForm" ng-submit="main.add()" novalidate>
+
+        <label for="flavor">Flavour</label>
+        <input type="text" name="flavor" id="flavor" placeholder="What is your donut flavour?" ng-model="main.donut.flavor" ng-pattern="/^apple$|^chocolate$|^strawberry$|^custard$/" required>
+
+        <div ng-messages="main.donutForm.flavor.$error" role="alert" ng-show="(main.donutForm.flavor.$touched || main.donutForm.$submitted)" class="error">
+          <div ng-message="required">Your flavor is required</div>
+          <div ng-message="pattern">Please select from apple ,chocolate, strawberry or custard</div>
+        </div>
+
+        <!-- <div class="error" ng-show="main.donutForm.flavor.$dirty && main.donutForm.flavor.$invalid">
+          <small class="error" ng-show="main.donutForm.flavor.$error.required"> Your flavor is required.</small>
+          <small class="error" ng-show="main.donutForm.flavor.$dirty && main.donutForm.flavor.$invalid"> Please select choose apple ,chocolate, strawberry or custard</small>
+        </div> -->
+
+
+
+        <label for="size">Size</label>
+        <input type="text" name="size" id="size" placeholder="What is your donut size?" ng-model="main.donut.size" ng-pattern="/^small$|^medium$|^large$/" required>
+
+        <div ng-messages="main.donutForm.size.$error" role="alert" ng-show="(main.donutForm.size.$touched || main.donutForm.$submitted)" class="error">
+          <div ng-message="required" >Your size is required</div>
+          <div ng-message="pattern">Please select from small, medium or large</div>
+        </div>
+
+        <!-- <div class="error"
+        ng-show="main.donutForm.size.$dirty && main.donutForm.size.$invalid">
+          <small class="error" ng-show="main.donutForm.size.$error.required"> Your size is required.</small>
+          <small class="error" ng-show="main.donutForm.size.$dirty && main.donutForm.size.$invalid"> Please select choose small, medium or large</small>
+        </div> -->
+
+        <label for="eaten">Eaten</label>
+        <input type="checkbox" name="eaten" id="eaten" ng-model="main.donut.eaten">
+
+        <h2>Recommend</h2>
+
+        <label for="recommed">Yes</label>
+        <input type="radio" name="recommend" id="yes" value="wouldRecommend" ng-model="main.donut.recommend">
+        <label for="recommed">No</label>
+        <input type="radio" name="recommend" id="no" value="wouldNotRecommend" ng-model="main.donut.recommend">
+
+
+        <input type="submit" value="add">
+      </form>
+
+
+      <h2 ng-class="[main.donut.flavor, main.donut.size, main.donut.recommend, {eaten: main.donut.eaten}, ]">{{main.donut.flavor}} {{main.donut.size}}</h2>
+
+      <ul>
+        <li ng-repeat="donut in main.all" ng-class="$even ? 'even' : 'odd' "><strong>{{donut.flavor}}</strong> - <em>{{donut.size}}</em></li>
+      </ul>
+    </main>
+  </body>
+</html>

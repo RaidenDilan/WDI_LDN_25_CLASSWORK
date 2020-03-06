@@ -1,0 +1,17 @@
+<h1>Edit</h1>
+<form method="POST" action="/chocolates/<%= chocolate.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" value="<%= chocolate.name %>">
+  </div>
+  <div>
+    <label for="brand">Brand</label>
+    <input type="text" name="brand" id="brand" value="<%= chocolate.brand %>">
+  </div>
+  <div>
+    <label for="image">Image</label>
+    <input type="text" name="image" id="image" value="<%= chocolate.image %>">
+  </div>
+  <button>Edit Chocolate</button>
+</form>

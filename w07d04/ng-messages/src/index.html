@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="donutApp">
+<head>
+  <meta charset="utf-8">
+  <title>Angular ngClass with Forms</title>
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body>
+  <main ng-controller="MainCtrl as main">
+    <h1>Angular Donuts</h1>
+    <form ng-submit="main.add()">
+      <label for="flavor">Flavour</label>
+      <input type="text" id="flavor" name="flavor" placeholder="What is your donut flavor?" ng-model="main.donut.flavor">
+
+      <label for="size">Size</label>
+      <input type="text" id="size" name="size" placeholder="What size donut do you want?" ng-model="main.donut.size">
+
+      <label for="eaten">Eaten</label>
+      <input type="checkbox" id="eaten" name="eaten" ng-model="main.donut.eaten">
+
+      <input type="submit" value="Add">
+    </form>
+
+    <h2 ng-class="[main.donut.flavor, main.donut.size, { eaten: main.donut.eaten }]">{{ main.donut.flavor }} {{ main.donut.size }}</h2>
+
+    <ul id="donuts">
+      <li ng-repeat="donut in main.all" ng-class="[{ eaten : donut.eaten}, ($even ? 'even' : 'odd'), donut.flavor, donut.size]">
+        {{donut.flavor}} {{donut.size}}
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

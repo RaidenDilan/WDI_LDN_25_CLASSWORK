@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Events</title>
+  </head>
+  <body>
+    <form id="form">
+      <input id="textInput" type="text">
+      <select id="selectInput">
+        <option>----</option>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+      <input type="radio" name="radioInput" class="radioInput">
+      <input type="radio" name="radioInput" class="radioInput">
+      <input type="radio" name="radioInput" class="radioInput">
+
+      <input type="submit" value="Submit"/>
+    </form>
+
+    <script>
+
+      const textInput = document.getElementById('textInput');
+
+      textInput.addEventListener('focus', (e) => {
+        console.log('I\'m focused!');
+        console.log(e.target);
+      });
+
+      textInput.addEventListener('blur', (e) => {
+        console.log('I\'m blurred!');
+        console.log(e.target);
+      });
+
+      const selectInput = document.getElementById('selectInput');
+
+      selectInput.addEventListener('change', (e) => {
+        console.log('I\'ve changed!');
+        console.log(e.target);
+      });
+
+      const radios = document.getElementsByClassName('radioInput');
+
+      for( var i=0; i<radios.length; i++ ) {
+        radios[i].addEventListener('change', (e) => {
+          console.log('Radio selected');
+          console.log(e.target);
+        });
+      }
+
+      const form = document.getElementById('form');
+
+      form.addEventListener('submit', (e) => {
+        // e.preventDefault();
+        console.log('Form submitted');
+        console.log(e.target);
+        return false;
+      });
+
+    </script>
+  </body>
+</html>

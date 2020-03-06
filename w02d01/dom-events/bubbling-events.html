@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bubbling Events</title>
+    <style type="text/css">
+      #parent{
+        width: 500px;
+        height: 500px;
+        background-color: green;
+      }
+      #child1{
+        width: 300px;
+        height: 300px;
+        background-color: red;
+      }
+
+      #child2{
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="child1">
+        <div id="child2"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+      const parent = document.getElementById('parent');
+      const child1 = document.getElementById('child1');
+      const child2 = document.getElementById('child2');
+
+      parent.addEventListener('click', () => {
+        console.log('#parent click');
+      });
+
+      // child1.addEventListener('click', (e) => {
+      child1.addEventListener('click', () => {
+        // e.stopPropagation();
+        console.log('#child1 click');
+      });
+
+      child2.addEventListener('click', () => {
+        console.log('#child2 click');
+      });
+
+    </script>
+  </body>
+</html>

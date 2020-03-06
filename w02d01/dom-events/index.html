@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Events</title>
+  </head>
+  <body>
+    <button>Click Me!</button>
+
+    <script>
+      const btn = document.querySelector('button');
+
+      // btn.onclick = function ()
+      // btn.onclick = (e) => {
+      btn.addEventListener('click', () => {
+        // message when button is clicked on
+        console.log('Oooh, you clicked me!');
+      });
+        // the text content of the button
+        // console.log(this);
+        //
+        // console.log(this.textContent);
+        // console.log(event);
+        //
+        // console.log(event.target.textContent);
+        // console.log(e.target.textContent);
+
+      btn.addEventListener('click', () => {
+        console.log('I am a second click event!');
+      });
+    </script>
+  </body>
+</html>

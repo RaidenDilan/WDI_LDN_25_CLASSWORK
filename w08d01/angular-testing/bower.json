@@ -1,0 +1,30 @@
+{
+  "name": "angular-test",
+  "description": "Simple tests for controllers in angular",
+  "main": "index.js",
+  "authors": [
+    "alexpchin <alex@alexchin.co.uk>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "pure": "^0.6.2",
+    "angular-mocks": "^1.6.3"
+  },
+  "overrides": {
+    "pure": {
+      "main": [
+        "pure.css",
+        "grids-responsive.css"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<ul>
+  <li ng-repeat="bird in birdsIndex.all">
+    <img ng-src="{{ bird.image }}">
+    <a ui-sref="birdsShow({ id: bird.id })">Specs</a>
+  </li>
+</ul>

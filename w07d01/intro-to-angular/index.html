@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="introToAngular"> <!-- DON'T FORGET THIS - module app from the app.js-->
+  <head>
+    <meta charset="utf-8">
+    <title>Intro to Angular</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="HomeCtrl as home">
+    <div class="message">
+      {{ home.message }}
+    </div>
+  </body>
+</html>

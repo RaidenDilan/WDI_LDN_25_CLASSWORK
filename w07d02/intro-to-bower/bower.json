@@ -1,0 +1,20 @@
+{
+  "name": "intro-to-bower",
+  "homepage": "https://github.com/ga-students/WDI_LDN_25_CLASSWORK",
+  "authors": [
+    "Raiden Dilan <raiden18@me.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3"
+  }
+}

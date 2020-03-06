@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="donutsApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Donuts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="DonutsCtrl as donuts">
+    <h1>{{ donuts.items.length }} Donuts</h1>
+    <button ng-click="donuts.showForm()" id="add-donut">Add a Donut</button>
+    <form id="new-donut" ng-submit="donuts.addItem()" ng-show="donuts.formVisible">
+      <input type="text" name='flavour' id="donut-flavor" placeholder="What type of donut?" value="Chocolate" ng-model="donuts.newItem.style">
+      <select name="style" id="donut-style" ng-model="donuts.newItem.flavor">
+          <option value="Old Fashioned">Old Fashioned</option>
+          <option value="Cake">Cake</option>
+          <option value="French Cruller">French Cruller</option>
+          <option value="Yeast">Yeast</option>
+      </select>
+      <input type="submit" value='Save My Donut' ng-click="donuts.showForm()">
+    </form>
+    <ul id="donuts">
+      <li ng-repeat="item in donuts.items | orderBy: 'flavor'">
+        {{ item.flavor }} ~ {{ item.style }}
+      </li>
+    </ul>
+  </body>
+</html>

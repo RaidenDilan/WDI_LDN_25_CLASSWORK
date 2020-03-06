@@ -1,0 +1,24 @@
+<h1>Edit Bird</h1>
+
+<form ng-submit="birdsEdit.update()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" ng-model="birdsEdit.bird.name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="latinName">Latin Name</label>
+    <input type="text" name="latinName" id="latinName" ng-model="birdsEdit.bird.latinName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="family">Family</label>
+    <input type="text" name="family" id="family" ng-model="birdsEdit.bird.family" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="base64">Image</label>
+    <!-- {{ birdsNew.bird }}
+    {{ birdsNew.bird.image }} -->
+    <input type="file" base64 name="base64" id="base64" ng-model="birdsEdit.bird.base64">
+  </div>
+
+  <button class="btn btn-primary">Update</button>
+</form>

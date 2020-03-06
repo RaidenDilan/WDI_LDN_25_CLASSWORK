@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Key Events</title>
+  </head>
+  <body>
+    <input id="textInput" type="text">
+    <script>
+
+      const textInput = document.getElementById('textInput');
+
+      textInput.addEventListener('keypress', () => {
+        console.log('keypress!');
+      });
+
+      // textInput.addEventListener('keydown', () => {
+      //   console.log('keydown!');
+      // });
+      //
+      // textInput.addEventListener('keyup', () => {
+      //   console.log('keyup!');
+      // });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tunr</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <li><%= link_to 'Artist', artists_path %></li>
+      <li><%= link_to 'Album', albums_path %></li>
+      <li><%= link_to 'Genres', genres_path %></li>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

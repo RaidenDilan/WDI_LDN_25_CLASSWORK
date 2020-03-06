@@ -1,0 +1,19 @@
+<h1>Index</h1>
+<div class="row">
+  <ul>
+    <% chocolates.forEach((chocolate) => { %>
+      <li class="six columns chocolate">
+        <img class="thumbnail" src="<%= chocolate.image %>" alt="<%= chocolate.name %>">
+        <a href="/chocolates/<%= chocolate.id %>"><h2><%= chocolate.name %></h2></a>
+        <h2><%= chocolate.name %></h2>
+        <h4><%= chocolate.brand %></h4>
+        <img src="<%= chocolate.image %>" alt="<%= chocolate.name %>">
+        <a href="/chocolates/<%= chocolate.id %>/edit" class="button">Edit</a>
+        <form action="/chocolates/<%= chocolate.id %>" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button>Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+</div>

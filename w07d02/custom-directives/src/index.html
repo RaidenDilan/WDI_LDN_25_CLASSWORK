@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CardsAgainstAssembly">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cards Against Assembly™</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body>
+    <div class="container">
+      <header
+        id="navbar"
+        class="container-fluid"
+        ng-controller="playersController as players"
+        >
+
+        <div class="navbar-title">
+          <h1>Cards Against Assembly</h1>
+        </div>
+
+        <div class="players">
+          <div
+            class="all"
+            ng-repeat="player in players.all"
+            >
+            <score
+              name="{{ player.name }}"
+              points="{{ player.points }}"
+              >
+            </score>
+          </div>
+        </div>
+
+      </header>
+
+      <section
+        id="cards"
+        class="container-fluid"
+        ng-controller="cardsController as cards"
+        >
+        <div class="row">
+
+          <div
+            class="col-sm-6 col-md-6 col-lg-6"
+            ng-repeat="card in cards.all"
+            >
+            <card question="{{ card.question }}"></card>
+          </div>
+
+        </div>
+      </section>
+
+      <footer><p>Made with <span class="heart">♥︎</span> at General Assembly</p></footer>
+
+    </div>
+  </body>
+</html>

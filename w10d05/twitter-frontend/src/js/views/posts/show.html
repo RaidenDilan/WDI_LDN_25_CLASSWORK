@@ -1,0 +1,6 @@
+<div>
+  <h1>{{ postsShow.post.user.fullname }}</h1>
+  <h3>{{ postsShow.post.body }}</h3>
+  <button ui-sref="postsEdit({ id: postsShow.post.id })">Edit</button>
+  <button ng-click="postsShow.delete()">Delete</button>
+</div>

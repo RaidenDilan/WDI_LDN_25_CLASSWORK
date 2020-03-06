@@ -1,0 +1,40 @@
+body, input, select, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+.btn-outline-success {
+  color: dodgerblue;
+  border-color: dodgerblue;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.img-thumbnail {
+  border-radius: 1px;
+}
+
+.form-check-label {
+  font-size: 12px;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+.jumbotron {
+  background-image: url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}

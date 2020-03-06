@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-sm-12">
+    <p id="notice"><%= notice %></p>
+  </div>
+  <div class="col-sm-12">
+    <h2><%= @author.first_name %> <%= @author.last_name %></h2>
+    <%= link_to 'Edit', edit_author_path(@author), class: "button" %>
+    <%= link_to 'Back', authors_path, class: "button" %>
+  </div>
+</div>

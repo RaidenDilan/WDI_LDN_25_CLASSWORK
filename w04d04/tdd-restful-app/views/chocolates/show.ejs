@@ -1,0 +1,8 @@
+<h2><%= chocolate.name %></h2>
+<h4><%= chocolate.brand %></h4>
+<img src="<%= beverage.image %>" alt="<%= beverage.name %>">
+
+<a href="/chocolates/<%= chocolate.id %>/edit"></a>
+
+<form method="POST" action="/chocolates/<%= chocolate.id %>">
+<input type="hidden" name="_method" value="DELETE">

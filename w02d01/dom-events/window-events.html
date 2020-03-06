@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document / Window Events</title>
+    <style>
+      #scroller{ background-image:url(http://fillmurray.com/800/800); background-size: contain; width: 100%; height: 10000px;}
+    </style>
+  </head>
+  <body>
+    <div id="scroller"></div>
+
+    <script>
+
+      window.addEventListener('resize', (e) => {
+        console.log(`${e.target.outerWidth} x ${e.target.outerHeight} px`);
+      });
+
+      window.addEventListener('scroll', (e) => {
+        console.log(`x: ${window.pageXOffset}px y: ${window.pageYOffset}px`);
+      });
+
+    </script>
+  </body>
+</html>

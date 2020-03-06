@@ -10,7 +10,7 @@ puts 'Goodbye'.slice('bye')
 puts 'shout'.upcase
 
 # ARRAYS
-puts [1, 2, 3, 4].insert(2, 'orange')
+puts [1, 2, 3, 4].insert(2, 'oran®ge')
 puts ['mike', 'emily', 'will', 'ajay'].clear
 puts [].empty?
 puts ['small', 'medium', 'large'].join('-')

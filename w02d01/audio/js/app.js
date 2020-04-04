@@ -7,10 +7,11 @@ window.addEventListener('DOMContentLoaded', () => {
   audio.addEventListener('ended', () => btn.textContent = 'PLAY');
 
   btn.addEventListener('click', (e) => {
-    if(audio.paused) {
+    if (audio.paused) {
       audio.play();
       e.target.innerHTML = 'PAUSE';
-    } else {
+    }
+    else {
       audio.pause();
       e.target.innerHTML = 'PLAY';
     }

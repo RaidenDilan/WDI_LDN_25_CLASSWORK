@@ -28,7 +28,6 @@ monkey.eatSomething('spare tyre');
 // console.log(die.value);
 
 
-
 // - Create a `monkey` object, which has the following properties:
 
 //   - `name (String)`

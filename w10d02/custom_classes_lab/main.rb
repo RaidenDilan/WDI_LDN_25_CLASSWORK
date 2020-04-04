@@ -25,9 +25,8 @@ p adrian.add_course "JS"
 p adrian
 
 class Vehicle
-  attr_accessor :color, :owner, :sale_price
   attr_reader :license_plate, :manufacture_date
-  # attr_accessor :color
+  attr_accessor :color, :owner, :sale_price
 
   def initialize(license_plate, manufacture_date, color, sale_price)
     raise "Invalid Manufacture Date" unless

@@ -86,7 +86,8 @@ end
 
 # 12
 puts "Guess my number"
-  answer = gets.to_f # answer = gets.to_i
+  answer = gets.to_f
+  # answer = gets.to_i
 if answer > 10
   puts "Too high man"
 elsif answer < 10

@@ -14,6 +14,7 @@ end
 # another method to arrays
 # - %w - turn (whatever) into an [array]
 names = %w(Fred Wilma Barney Betty)
+
 for i in 0..names.size
   puts 'names[i] --->', names[i]
 end

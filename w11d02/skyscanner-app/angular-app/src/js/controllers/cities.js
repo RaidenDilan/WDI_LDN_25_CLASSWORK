@@ -12,10 +12,9 @@ function CitiesIndexCtrl(City, skyscanner) {
   vm.flights = [];
 
   function getFlights() {
-    skyscanner.getFlights('anywhere')
-      .then((quotes) => {
-        vm.flights = quotes;
-      });
+    skyscanner
+      .getFlights('anywhere')
+      .then((quotes) => vm.flights = quotes);
   }
 
   getFlights();
@@ -40,17 +39,19 @@ CitiesShowCtrl.$inject = ['City', '$stateParams', '$state', 'skyscanner'];
 function CitiesShowCtrl(City, $stateParams, $state, skyscanner) {
   const vm = this;
 
-  City.get($stateParams).$promise.then((city) => {
-    vm.city = city;
-    getFlights();
-  });
+  City
+    .get($stateParams)
+    .$promise
+    .then((city) => {
+      vm.city = city;
+      getFlights();
+    });
 
   vm.flights = [];
 
   function getFlights() {
-    skyscanner.getFlights(vm.city.airport)
-      .then((quotes) => {
-        vm.flights = quotes;
-      });
+    skyscanner
+      .getFlights(vm.city.airport)
+      .then((quotes) => vm.flights = quotes);
   }
 }

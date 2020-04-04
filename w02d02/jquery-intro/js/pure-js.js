@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const feelingDiv = document.getElementById('feeling');
   const buttons = document.getElementsByTagName('button');
 
-  for(let i=0, len=buttons.length;i<len;i++) {
+  for(let i = 0, len = buttons.length; i < len;i++) {
     buttons[i].addEventListener('click', (e) => {
       const newFeeling = e.target.textContent;
       feelingDiv.textContent = newFeeling;

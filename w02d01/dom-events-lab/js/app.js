@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     const scroll = window.scrolly;
-    if(scroll > 40) {
+    if (scroll > 40) {
       // heading.classList.add('fade')
     }
   });
